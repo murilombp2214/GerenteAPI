@@ -12,12 +12,12 @@ namespace GerenteAPI
     /// <summary>
     /// Class utilizada para realizar requisiçoes para APIs
     /// </summary>
-    public static class GerenteAPI
+    public class ClienteAPI
     {
-
+        public TimeSpan Timeout { get; init; }
         public static T DeserializeObject<T>(string json) => JsonConvert.DeserializeObject<T>(json);
         public static string SerializeObject(object obj) => JsonConvert.SerializeObject(obj);
-        
+
 
         /// <summary>
         /// Configuração padrão para os verbos
@@ -25,9 +25,9 @@ namespace GerenteAPI
         /// <param name="client"></param>
         /// <param name="get"></param>
         /// <param name="mediaType"></param>
-        private static void ConfigPadrao(HttpClient client, bool get = false, string mediaType = "")
+        private void ConfigPadrao(HttpClient client, bool get = false, string mediaType = "")
         {
-            client.Timeout = new TimeSpan(0, 1, 0);
+            client.Timeout = Timeout == null ? new TimeSpan(0, 1, 0) : Timeout;
             if (get)
             {
                 client.DefaultRequestHeaders.Accept.Clear();
@@ -35,7 +35,7 @@ namespace GerenteAPI
             }
         }
 
-        public static T Delete<T>(string urlAPi, string json, string mediaType = "application/json")
+        public  T Delete<T>(string urlAPi, string json, string mediaType = "application/json")
         {
             using (var client = new HttpClient(new HttpClientHandler()) { BaseAddress = new Uri(urlAPi) })
             {
@@ -54,7 +54,7 @@ namespace GerenteAPI
         /// <param name="json">Dados da requisição, serão passados no corpo da requisição como json</param>
         /// <param name="mediaType"> Tipo de dados, padrão 'application/json'</param>
         /// <returns>Objeto do tipo T, desserealizado da API</returns>
-        public static T Put<T>(string urlAPi, string json, string urlJson = "",string mediaType = "application/json", Dictionary<string,string> defaultHeaders = null)
+        public  T Put<T>(string urlAPi, string json, string urlJson = "", string mediaType = "application/json", Dictionary<string, string> defaultHeaders = null)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace GerenteAPI
         /// <param name="urlJson">utl do json</param>
         /// <param name="mediaType">tipo de media</param>
         /// <returns>objeto do tipo T</returns>
-        public static T Get<T>(string urlAPi, string json, string urlJson = "", string mediaType = "application/json")
+        public  T Get<T>(string urlAPi, string json, string urlJson = "", string mediaType = "application/json")
         {
             try
             {
@@ -94,7 +94,6 @@ namespace GerenteAPI
                 {
 
                     ConfigPadrao(client, true, mediaType);
-                    //client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.143 Safari/537.36");
                     HttpResponseMessage response = client.GetAsync(json).Result;
                     return JsonConvert.DeserializeObject<T>(response.Content.ReadAsStringAsync().Result);
                 }
@@ -112,7 +111,7 @@ namespace GerenteAPI
         /// </summary>
         /// <param name="data">url</param>
         /// <returns>conteudo baixado especificado em uma string</returns>
-        public static string DownloadData(string data)
+        public  string DownloadData(string data)
         {
             using (var client = new WebClient())
             {
@@ -132,7 +131,7 @@ namespace GerenteAPI
         /// <param name="mediaType"></param>
         /// <param name="defaultHeaders"></param>
         /// <returns></returns>
-        public static Tuple<T,K> PostMessage<T,K>(string urlAPi, string json,
+        public  Tuple<T, K> PostMessage<T, K>(string urlAPi, string json,
             string mediaType = "application/json",
             Dictionary<string, string> defaultHeaders = null,
             string authorization = ""
@@ -143,7 +142,7 @@ namespace GerenteAPI
         {
             var request = new HttpRequestMessage(HttpMethod.Post, urlAPi);
 
-            if(!string.IsNullOrEmpty(authorization))
+            if (!string.IsNullOrEmpty(authorization))
             {
                 request.Headers.Authorization = new AuthenticationHeaderValue(authorization);
             }
@@ -155,17 +154,17 @@ namespace GerenteAPI
 
             request.Content = new StringContent(json, Encoding.UTF8, mediaType);
 
-            var response =  new HttpClient().SendAsync(request).Result;
+            var response = new HttpClient().SendAsync(request).Result;
             var t = response.Content.ReadAsStringAsync().Result;
 
             //tentativa tipo T
             try
             {
-                return new Tuple<T, K>(JsonConvert.DeserializeObject<T>(t),null);
+                return new Tuple<T, K>(JsonConvert.DeserializeObject<T>(t), null);
             }
             catch (Exception erro)
             {
-                return new Tuple<T, K> (null, JsonConvert.DeserializeObject<K>(t));
+                return new Tuple<T, K>(null, JsonConvert.DeserializeObject<K>(t));
             }
 
         }
@@ -180,9 +179,9 @@ namespace GerenteAPI
         /// <param name="mediaType"></param>
         /// <param name="defaultHeaders"></param>
         /// <returns></returns>
-        public static T Post<T>(string urlAPi, string json, 
-            string mediaType = "application/json", 
-            Dictionary<string,string> defaultHeaders = null
+        public  T Post<T>(string urlAPi, string json,
+            string mediaType = "application/json",
+            Dictionary<string, string> defaultHeaders = null
             )
         {
             try
@@ -204,7 +203,7 @@ namespace GerenteAPI
             catch (Exception erro) { throw erro; }//outros erros
         }
 
-        private static void SetDefaultHeader(in HttpClient client, in Dictionary<string, string> headers)
+        private  void SetDefaultHeader(in HttpClient client, in Dictionary<string, string> headers)
         {
             if (headers is object && headers.Count > 0)
             {
