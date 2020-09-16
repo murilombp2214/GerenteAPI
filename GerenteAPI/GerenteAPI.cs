@@ -14,7 +14,7 @@ namespace GerenteAPI
     /// </summary>
     public class ClienteAPI
     {
-        public TimeSpan Timeout { get; init; }
+        public TimeSpan Timeout { get; set; }
         public static T DeserializeObject<T>(string json) => JsonConvert.DeserializeObject<T>(json);
         public static string SerializeObject(object obj) => JsonConvert.SerializeObject(obj);
 
