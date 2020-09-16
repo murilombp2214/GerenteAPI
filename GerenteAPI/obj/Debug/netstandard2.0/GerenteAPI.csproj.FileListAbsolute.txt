@@ -1,0 +1,15 @@
+C:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\bin\Debug\netstandard2.0\GerenteAPI.deps.json
+C:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\bin\Debug\netstandard2.0\GerenteAPI.dll
+C:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\bin\Debug\netstandard2.0\GerenteAPI.pdb
+C:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.AssemblyInfoInputs.cache
+C:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.AssemblyInfo.cs
+C:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.dll
+C:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.pdb
+E:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\bin\Debug\netstandard2.0\GerenteAPI.deps.json
+E:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\bin\Debug\netstandard2.0\GerenteAPI.dll
+E:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\bin\Debug\netstandard2.0\GerenteAPI.pdb
+E:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.AssemblyInfoInputs.cache
+E:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.AssemblyInfo.cs
+E:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.csproj.CoreCompileInputs.cache
+E:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.dll
+E:\Trabalho\Pessoal\GerenteAPI\GerenteAPI\obj\Debug\netstandard2.0\GerenteAPI.pdb

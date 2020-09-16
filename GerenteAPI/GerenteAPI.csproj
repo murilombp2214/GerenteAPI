@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Murilo Barros Peixoto</Authors>
+    <Product>FerPe</Product>
+    <Description>Utilizado para integrações com api(s)</Description>
+    <Copyright>Murilo Barros Peixoto</Copyright>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.3</Version>
+    <PackageReleaseNotes>Conserto de bugs e atualizado forma de realizar o POST</PackageReleaseNotes>
+    <PackageTags>API;Integração;POST;GET;DELETE;PUT</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

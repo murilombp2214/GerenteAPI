@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JZiUQwy3xXO4sEJMR6dyFwGm87CxH5zFgWqsrbLVd3vLVhCAQKhynBXM8p+kcAPf2M6vK5At6t5mQut+PE58Qg==",
+  "success": true,
+  "projectFilePath": "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\muril\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
