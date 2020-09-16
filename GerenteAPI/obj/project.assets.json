@@ -59,7 +59,6 @@
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -226,13 +225,13 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.3",
+    "version": "2.0.0",
     "restore": {
-      "projectUniqueName": "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
+      "projectUniqueName": "C:\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
       "projectName": "GerenteAPI",
-      "projectPath": "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
+      "projectPath": "C:\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
       "packagesPath": "C:\\Users\\muril\\.nuget\\packages\\",
-      "outputPath": "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\obj\\",
+      "outputPath": "C:\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

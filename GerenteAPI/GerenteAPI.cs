@@ -35,7 +35,7 @@ namespace GerenteAPI
             }
         }
 
-        public  T Delete<T>(string urlAPi, string json, string mediaType = "application/json")
+        public T Delete<T>(string urlAPi, string json, string mediaType = "application/json")
         {
             using (var client = new HttpClient(new HttpClientHandler()) { BaseAddress = new Uri(urlAPi) })
             {
@@ -54,7 +54,7 @@ namespace GerenteAPI
         /// <param name="json">Dados da requisição, serão passados no corpo da requisição como json</param>
         /// <param name="mediaType"> Tipo de dados, padrão 'application/json'</param>
         /// <returns>Objeto do tipo T, desserealizado da API</returns>
-        public  T Put<T>(string urlAPi, string json, string urlJson = "", string mediaType = "application/json", Dictionary<string, string> defaultHeaders = null)
+        public T Put<T>(string urlAPi, string json, string urlJson = "", string mediaType = "application/json", Dictionary<string, string> defaultHeaders = null)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace GerenteAPI
         /// <param name="urlJson">utl do json</param>
         /// <param name="mediaType">tipo de media</param>
         /// <returns>objeto do tipo T</returns>
-        public  T Get<T>(string urlAPi, string json, string urlJson = "", string mediaType = "application/json")
+        public T Get<T>(string urlAPi, string json, string urlJson = "", string mediaType = "application/json")
         {
             try
             {
@@ -111,7 +111,7 @@ namespace GerenteAPI
         /// </summary>
         /// <param name="data">url</param>
         /// <returns>conteudo baixado especificado em uma string</returns>
-        public  string DownloadData(string data)
+        public string DownloadData(string data)
         {
             using (var client = new WebClient())
             {
@@ -131,7 +131,7 @@ namespace GerenteAPI
         /// <param name="mediaType"></param>
         /// <param name="defaultHeaders"></param>
         /// <returns></returns>
-        public  Tuple<T, K> PostMessage<T, K>(string urlAPi, string json,
+        public Tuple<T, K> PostMessage<T, K>(string urlAPi, string json,
             string mediaType = "application/json",
             Dictionary<string, string> defaultHeaders = null,
             string authorization = ""
@@ -179,7 +179,7 @@ namespace GerenteAPI
         /// <param name="mediaType"></param>
         /// <param name="defaultHeaders"></param>
         /// <returns></returns>
-        public  T Post<T>(string urlAPi, string json,
+        public T Post<T>(string urlAPi, string json,
             string mediaType = "application/json",
             Dictionary<string, string> defaultHeaders = null
             )
@@ -203,7 +203,7 @@ namespace GerenteAPI
             catch (Exception erro) { throw erro; }//outros erros
         }
 
-        private  void SetDefaultHeader(in HttpClient client, in Dictionary<string, string> headers)
+        private void SetDefaultHeader(in HttpClient client, in Dictionary<string, string> headers)
         {
             if (headers is object && headers.Count > 0)
             {

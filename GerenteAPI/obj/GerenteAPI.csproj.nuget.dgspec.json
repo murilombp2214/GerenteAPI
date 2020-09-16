@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj": {}
+    "C:\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj": {}
   },
   "projects": {
-    "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj": {
-      "version": "1.0.3",
+    "C:\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj": {
+      "version": "2.0.0",
       "restore": {
-        "projectUniqueName": "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
+        "projectUniqueName": "C:\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
         "projectName": "GerenteAPI",
-        "projectPath": "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
+        "projectPath": "C:\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\GerenteAPI.csproj",
         "packagesPath": "C:\\Users\\muril\\.nuget\\packages\\",
-        "outputPath": "C:\\backup\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\obj\\",
+        "outputPath": "C:\\Trabalho\\Pessoal\\GerenteAPI\\GerenteAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
