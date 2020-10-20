@@ -14,7 +14,7 @@ namespace GerenteAPI
     /// </summary>
     public class ClienteAPI
     {
-        public TimeSpan Timeout { get; set; }
+        public TimeSpan Timeout { get; set; } = new TimeSpan(0, 1, 0);
         public static T DeserializeObject<T>(string json) => JsonConvert.DeserializeObject<T>(json);
         public static string SerializeObject(object obj) => JsonConvert.SerializeObject(obj);
 
@@ -27,7 +27,7 @@ namespace GerenteAPI
         /// <param name="mediaType"></param>
         private void ConfigPadrao(HttpClient client, bool get = false, string mediaType = "")
         {
-            client.Timeout = Timeout == null ? new TimeSpan(0, 1, 0) : Timeout;
+            client.Timeout = Timeout;
             if (get)
             {
                 client.DefaultRequestHeaders.Accept.Clear();
@@ -77,7 +77,7 @@ namespace GerenteAPI
 
 
         /// <summary>
-        /// Realizar Get 
+        /// Realizar Get
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="urlAPi">url api</param>
@@ -215,3 +215,4 @@ namespace GerenteAPI
         }
     }
 }
+
